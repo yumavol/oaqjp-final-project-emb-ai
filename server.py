@@ -12,7 +12,14 @@ def get_emotion_detector():
     if result["dominant_emotion"] is None:
         return (" Invalid text! Please try again!", 200)
 
-    return (result, 200)
+    report = (
+        "For the given statement, the system response is "
+        f"'anger': {result['anger']}, 'disgust': {result['disgust']}, "
+        f"'fear': {result['fear']}, 'joy': {result['joy']} "
+        f"and 'sadness': {result['sadness']}. "
+        f"The dominant emotion is {result['dominant_emotion']}."
+    )
+    return (report, 200)
 
 @app.route("/")
 def index():
