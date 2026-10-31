@@ -23,8 +23,8 @@ def emotion_detector(text_to_analyze):
     return formatted_response 
 
 
-result = emotion_detector(text_to_analyze="I am so sad")
+# result = emotion_detector(text_to_analyze="I am so sad")
 
-print(result)
+# print(result)
 
  
